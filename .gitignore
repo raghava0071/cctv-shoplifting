@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.env
+.venv
+venv/
+pip-wheel-metadata/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Data & model artifacts (keep repo clean)
+data/
+output/
+runs/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.csv
+*.jsonl
+yolov8*.pt
+*.onnx
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/
