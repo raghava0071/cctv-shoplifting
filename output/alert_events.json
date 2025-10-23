@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "src": "output/alerts/alert_1760582997001.mp4",
+      "tid": 1,
+      "start_ts": 1761262507.019116,
+      "end_ts": 1761262507.221445,
+      "max_p": 0.5477,
+      "start_offset_s": 28.28,
+      "end_offset_s": 28.48,
+      "duration_s": 0.2
+    }
+  ]
+}
