@@ -1,19 +1,19 @@
 # Datasets & Provenance
 
-## External sources (do **not** commit raw videos)
-- **DCSASS Dataset** (Kaggle): `mateohervas/dcsass-dataset` — License: CC-BY-NC-SA-4.0  
-  Used subset: `Shoplifting/**/*.mp4`
-- **UCSD Anomaly Detection v1p2** (Kaggle mirror `karthiknm1/ucsd-anomaly-detection-dataset`)  
-  Used subset converted to MP4 with our script: `UCSDped1/Test/* -> sequence.mp4` (first 16 folders)
+We do **not** commit full third-party videos. Instead:
+- **DCSASS** (Kaggle: `mateohervas/dcsass-dataset`, CC-BY-NC-SA-4.0)  
+  Used: `Shoplifting/**/*.mp4`
+- **UCSD Anomaly Detection v1p2** (Kaggle mirror: `karthiknm1/ucsd-anomaly-detection-dataset`)  
+  Used: `UCSDped1/Test/*` (first 16 folders) converted via `tools/ucsd_frames_to_mp4.py`.
 
-## Derived artifacts we *do* commit
-- `labels.csv` (track-level labels: `shoplifting` vs `normal`)
-- `output/alert_log.csv` (runtime row-per-frame with `shoplift_prob`)
-- `output/alert_events.json` (merged events)
-- `runs/lstm_skeleton_best.pt` (trained LSTM)
-- Manifests (paths, sizes, checksums) for:
-  - `pose_out_dcsass/**/track_*.npy` (positives)
-  - `pose_out_ucsd_neg/**/track_*.npy` (negatives)
-  - `datasets/ucsd_mp4/**/sequence.mp4` (converted small MP4s), if small enough
+## Recreate
+\`\`\`bash
+bash tools/recreate_data.sh
+\`\`\`
 
-> We do **not** commit Kaggle videos due to size/licensing. Use the scripts below to fetch/convert on any machine.
+## Included in repo
+- \`labels.csv\`
+- \`pose_out_sample/\` (100 positive + 93 negative tracks)
+- \`output/alert_log.csv\`, \`output/alert_events.json\`
+- \`output/demos/*.mp4\` (event demo clips)
+- \`runs/lstm_skeleton_best.pt\` (Git LFS)
