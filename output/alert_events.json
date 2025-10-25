@@ -1,14 +1,3 @@
-{
-  "events": [
-    {
-      "src": "output/alerts/alert_1760582997001.mp4",
-      "tid": 1,
-      "start_ts": 1761262507.019116,
-      "end_ts": 1761262507.221445,
-      "max_p": 0.5477,
-      "start_offset_s": 28.28,
-      "end_offset_s": 28.48,
-      "duration_s": 0.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2998110aae67c436f842fc75d4e81f959522486aef0c4bb12a8321a8dd25dfc
+size 544
