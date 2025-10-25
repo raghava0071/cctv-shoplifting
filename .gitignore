@@ -17,3 +17,8 @@ output/behavior_scores.csv
 !output/demos/*.mp4
 !datasets/*.md
 !datasets/**/.gitkeep
+!output/alert_log.csv
+!output/alert_events.json
+!output/demos/*.mp4
+!datasets/**/.gitkeep
+!datasets/*.md
