@@ -1,6 +1,6 @@
 # Datasets & Provenance
 
-We do **not** commit full third-party videos. Instead:
+I do **not** commit full third-party videos. Instead:
 - **DCSASS** (Kaggle: `mateohervas/dcsass-dataset`, CC-BY-NC-SA-4.0)  
   Used: `Shoplifting/**/*.mp4`
 - **UCSD Anomaly Detection v1p2** (Kaggle mirror: `karthiknm1/ucsd-anomaly-detection-dataset`)  
