@@ -1,37 +1,19 @@
-# Python
+# Python / env
+venv/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.egg-info/
-*.egg
-.env
-.venv
-venv/
-pip-wheel-metadata/
 
-# macOS
-.DS_Store
-
-# IDE
-.vscode/
-.idea/
-
-# Data & model artifacts (keep repo clean)
-data/
-output/
+# Data/artifacts
+output/alerts/
+pose_out/
 runs/
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.csv
-*.jsonl
-yolov8*.pt
-*.onnx
+output/alert_log.csv
+output/behavior_scores.csv
 
-# Logs
-*.log
-
-# Streamlit
-.streamlit/
+# OS/editor
+.DS_Store
+!output/alert_log.csv
+!output/alert_events.json
+!output/demos/*.mp4
+!datasets/*.md
+!datasets/**/.gitkeep
