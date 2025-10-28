@@ -28,3 +28,6 @@ output/behavior_scores.csv
 !dataset_previews/*.mp4
 !datasets/*.md
 !datasets/**/.gitkeep
+!output/demos/*.mp4
+!output/alert_log.csv
+!output/alert_events.json
