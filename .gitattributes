@@ -1,6 +1,10 @@
-runs/*.pt filter=lfs diff=lfs merge=lfs -text
-output/*.csv filter=lfs diff=lfs merge=lfs -text
-output/*.json filter=lfs diff=lfs merge=lfs -text
-output/demos/*.mp4 filter=lfs diff=lfs merge=lfs -text
-pose_out_sample/**/*.npy filter=lfs diff=lfs merge=lfs -text
-dataset_previews/*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Tell GitHub/linguist to ignore runtime / output folders
+output/* linguist-vendored
+runs/* linguist-vendored
+pose_out/* linguist-vendored
+pose_out_dcsass/* linguist-vendored
+pose_out_ucsd_neg/sequence/* linguist-vendored
+results/* linguist-vendored
+datasets/* linguist-vendored
+dataset_previews/* linguist-vendored
+manifests/* linguist-vendored
