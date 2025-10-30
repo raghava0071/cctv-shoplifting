@@ -1,0 +1,143 @@
+{
+  "video": "datasets/ucsd_mp4/UCSDped1/Test/Test004/sequence.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 40,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_1.npy"
+    },
+    {
+      "track_id": 2,
+      "frames": 83,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_2.npy"
+    },
+    {
+      "track_id": 3,
+      "frames": 11,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_3.npy"
+    },
+    {
+      "track_id": 4,
+      "frames": 81,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_4.npy"
+    },
+    {
+      "track_id": 6,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_6.npy"
+    },
+    {
+      "track_id": 14,
+      "frames": 24,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_14.npy"
+    },
+    {
+      "track_id": 15,
+      "frames": 7,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_15.npy"
+    },
+    {
+      "track_id": 17,
+      "frames": 13,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_17.npy"
+    },
+    {
+      "track_id": 18,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_18.npy"
+    },
+    {
+      "track_id": 19,
+      "frames": 28,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_19.npy"
+    },
+    {
+      "track_id": 20,
+      "frames": 43,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_20.npy"
+    },
+    {
+      "track_id": 22,
+      "frames": 23,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_22.npy"
+    },
+    {
+      "track_id": 24,
+      "frames": 10,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_24.npy"
+    },
+    {
+      "track_id": 25,
+      "frames": 17,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_25.npy"
+    },
+    {
+      "track_id": 26,
+      "frames": 57,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_26.npy"
+    },
+    {
+      "track_id": 27,
+      "frames": 5,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_27.npy"
+    },
+    {
+      "track_id": 31,
+      "frames": 12,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_31.npy"
+    },
+    {
+      "track_id": 32,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_32.npy"
+    },
+    {
+      "track_id": 33,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_33.npy"
+    },
+    {
+      "track_id": 40,
+      "frames": 37,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_40.npy"
+    },
+    {
+      "track_id": 45,
+      "frames": 11,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_45.npy"
+    },
+    {
+      "track_id": 50,
+      "frames": 2,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_50.npy"
+    },
+    {
+      "track_id": 62,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_ucsd_neg/sequence/track_62.npy"
+    }
+  ]
+}

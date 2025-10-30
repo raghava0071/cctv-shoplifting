@@ -3,38 +3,42 @@ import numpy as np
 import torch
 from torch import nn
 
+# Must match the training architecture (num_layers=2, hidden=192, bidirectional, dropout=0.1)
 class LSTMBinary(nn.Module):
-    def __init__(self, input_dim=51, hidden=128):
+    def __init__(self, input_dim=51, hidden=192):
         super().__init__()
-        self.lstm = nn.LSTM(input_dim, hidden, batch_first=True, num_layers=1, bidirectional=True)
+        self.lstm = nn.LSTM(
+            input_dim, hidden, batch_first=True,
+            num_layers=2, bidirectional=True, dropout=0.1
+        )
         self.head = nn.Sequential(
-            nn.Linear(hidden*2, 128),
+            nn.Linear(hidden*2, 256),
             nn.ReLU(),
-            nn.Linear(128, 2)
+            nn.Linear(256, 2)
         )
     def forward(self, x):
-        _, (h, _) = self.lstm(x)
-        hcat = torch.cat([h[-2], h[-1]], dim=-1)
+        _, (h, _) = self.lstm(x)            # h: (num_layers*2, B, hidden)
+        hcat = torch.cat([h[-2], h[-1]], -1) # (B, hidden*2)
         return self.head(hcat)
 
 class BehaviorScorer:
     """
-    Loads runs/lstm_skeleton_best.pt and scores one pose track (np.ndarray T x 17 x 3)
-    Returns probability of 'shoplifting' (float 0..1).
+    Loads runs/lstm_skeleton_best.pt and scores one pose track (np.ndarray T x 17 x 3).
+    Returns probability of 'shoplifting' (float 0..1). Threshold stored for convenience.
     """
-    def __init__(self, ckpt_path="runs/lstm_skeleton_best.pt", device=None, max_len=160):
+    def __init__(self, ckpt_path="runs/lstm_skeleton_best.pt", device=None, max_len=160, threshold=0.51):
         self.device = device or ("mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu"))
         self.max_len = max_len
+        self.threshold = threshold
         self.model = LSTMBinary(input_dim=17*3).to(self.device)
         state = torch.load(ckpt_path, map_location=self.device)
-        self.model.load_state_dict(state)
+        self.model.load_state_dict(state)   # now shapes match
         self.model.eval()
 
     @staticmethod
     def _normalize(arr):
         # arr: (T,17,3) with (x,y,conf). Center at hips, scale by spread.
-        xy = arr[..., :2]
-        c  = arr[..., 2:3]
+        xy = arr[..., :2]; c  = arr[..., 2:3]
         hip_idx = [11, 12] if arr.shape[1] >= 13 else [0]
         hip = xy[:, hip_idx, :].mean(axis=1, keepdims=True)
         xy = xy - hip
@@ -52,17 +56,12 @@ class BehaviorScorer:
         return (np.concatenate([arr]*reps, axis=0))[:self.max_len]
 
     def score_track(self, pose_track: np.ndarray) -> float:
-        """
-        pose_track: numpy array (T,17,3) as saved by our extractor.
-        Returns: probability of 'shoplifting' (float 0..1)
-        """
         arr = self._normalize(pose_track)
         arr = self._pad_or_trim(arr)
-        x = arr.reshape(arr.shape[0], -1).astype(np.float32)  # (T,51)
-        xt = torch.from_numpy(x).unsqueeze(0).to(self.device) # (1,T,51)
+        x = arr.reshape(arr.shape[0], -1).astype(np.float32)   # (T,51)
+        xt = torch.from_numpy(x).unsqueeze(0).to(self.device)  # (1,T,51)
         with torch.no_grad():
-            logits = self.model(xt)
-            prob = torch.softmax(logits, dim=-1)[0,1].item()
+            prob = torch.softmax(self.model(xt), dim=-1)[0,1].item()
         return float(prob)
 
 if __name__ == "__main__":
@@ -70,10 +69,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--track", required=True, help="path to pose_out/.../track_XX.npy")
     ap.add_argument("--ckpt", default="runs/lstm_skeleton_best.pt")
+    ap.add_argument("--threshold", type=float, default=0.51)
     args = ap.parse_args()
 
-    scorer = BehaviorScorer(ckpt_path=args.ckpt)
+    scorer = BehaviorScorer(ckpt_path=args.ckpt, threshold=args.threshold)
     import numpy as np
     arr = np.load(args.track)
     p = scorer.score_track(arr)
-    print(f"Shoplifting probability: {p:.3f}")
+    print(f"Shoplifting probability: {p:.3f}  (threshold={scorer.threshold})")

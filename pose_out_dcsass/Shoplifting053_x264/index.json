@@ -1,0 +1,35 @@
+{
+  "video": "datasets/dcsass/DCSASS Dataset/DCSASS Dataset/Shoplifting/Shoplifting053_x264.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 120,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting053_x264/track_1.npy"
+    },
+    {
+      "track_id": 2,
+      "frames": 1231,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting053_x264/track_2.npy"
+    },
+    {
+      "track_id": 4,
+      "frames": 2,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting053_x264/track_4.npy"
+    },
+    {
+      "track_id": 5,
+      "frames": 59,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting053_x264/track_5.npy"
+    },
+    {
+      "track_id": 6,
+      "frames": 353,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting053_x264/track_6.npy"
+    }
+  ]
+}

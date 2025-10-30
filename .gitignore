@@ -1,33 +1,14 @@
-# Python / env
+# Ignore heavy data / environment files
+output/**/*.mp4
+output/demos/
+output/hard_negatives/
+datasets/**/*.mp4
+datasets/**/*.avi
+datasets/**/*.mov
+datasets/**/*.mkv
+datasets/**/*.zip
 venv/
 __pycache__/
-*.pyc
-
-# Data/artifacts
-output/alerts/
-pose_out/
-runs/
-output/alert_log.csv
-output/behavior_scores.csv
-
-# OS/editor
 .DS_Store
-!output/alert_log.csv
-!output/alert_events.json
-!output/demos/*.mp4
-!datasets/*.md
-!datasets/**/.gitkeep
-!output/alert_log.csv
-!output/alert_events.json
-!output/demos/*.mp4
-!datasets/**/.gitkeep
-!datasets/*.md
-!output/alert_log.csv
-!output/alert_events.json
-!output/demos/*.mp4
-!dataset_previews/*.mp4
-!datasets/*.md
-!datasets/**/.gitkeep
-!output/demos/*.mp4
-!output/alert_log.csv
-!output/alert_events.json
+*.log
+*.tmp

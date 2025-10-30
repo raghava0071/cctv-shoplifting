@@ -1,0 +1,23 @@
+{
+  "video": "output/alerts/alert_1760583367752.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760583367752/track_1.npy"
+    },
+    {
+      "track_id": 7,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760583367752/track_7.npy"
+    },
+    {
+      "track_id": 8,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760583367752/track_8.npy"
+    }
+  ]
+}

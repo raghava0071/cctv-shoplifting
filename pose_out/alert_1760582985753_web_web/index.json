@@ -1,0 +1,29 @@
+{
+  "video": "output/alerts/alert_1760582985753_web_web.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 11,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753_web_web/track_1.npy"
+    },
+    {
+      "track_id": 4,
+      "frames": 5,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753_web_web/track_4.npy"
+    },
+    {
+      "track_id": 5,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753_web_web/track_5.npy"
+    },
+    {
+      "track_id": 11,
+      "frames": 2,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753_web_web/track_11.npy"
+    }
+  ]
+}

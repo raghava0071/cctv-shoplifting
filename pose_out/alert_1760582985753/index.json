@@ -1,0 +1,29 @@
+{
+  "video": "output/alerts/alert_1760582985753.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 11,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753/track_1.npy"
+    },
+    {
+      "track_id": 5,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753/track_5.npy"
+    },
+    {
+      "track_id": 7,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753/track_7.npy"
+    },
+    {
+      "track_id": 12,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760582985753/track_12.npy"
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "video": "datasets/dcsass/DCSASS Dataset/DCSASS Dataset/Shoplifting/Shoplifting013_x264.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 630,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_1.npy"
+    },
+    {
+      "track_id": 2,
+      "frames": 32,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_2.npy"
+    },
+    {
+      "track_id": 3,
+      "frames": 43,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_3.npy"
+    },
+    {
+      "track_id": 5,
+      "frames": 16,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_5.npy"
+    },
+    {
+      "track_id": 6,
+      "frames": 26,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_6.npy"
+    },
+    {
+      "track_id": 8,
+      "frames": 5,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_8.npy"
+    },
+    {
+      "track_id": 12,
+      "frames": 18,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_12.npy"
+    },
+    {
+      "track_id": 15,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_15.npy"
+    },
+    {
+      "track_id": 16,
+      "frames": 9,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_16.npy"
+    },
+    {
+      "track_id": 17,
+      "frames": 6,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_17.npy"
+    },
+    {
+      "track_id": 18,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_18.npy"
+    },
+    {
+      "track_id": 19,
+      "frames": 36,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_19.npy"
+    },
+    {
+      "track_id": 21,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_21.npy"
+    },
+    {
+      "track_id": 23,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_23.npy"
+    },
+    {
+      "track_id": 24,
+      "frames": 9,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_24.npy"
+    },
+    {
+      "track_id": 25,
+      "frames": 51,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_25.npy"
+    },
+    {
+      "track_id": 26,
+      "frames": 6,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_26.npy"
+    },
+    {
+      "track_id": 27,
+      "frames": 37,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_27.npy"
+    },
+    {
+      "track_id": 28,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_28.npy"
+    },
+    {
+      "track_id": 30,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_30.npy"
+    },
+    {
+      "track_id": 31,
+      "frames": 8,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_31.npy"
+    },
+    {
+      "track_id": 33,
+      "frames": 32,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_33.npy"
+    },
+    {
+      "track_id": 34,
+      "frames": 18,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_34.npy"
+    },
+    {
+      "track_id": 35,
+      "frames": 32,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_35.npy"
+    },
+    {
+      "track_id": 36,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_36.npy"
+    },
+    {
+      "track_id": 37,
+      "frames": 110,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_37.npy"
+    },
+    {
+      "track_id": 38,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_38.npy"
+    },
+    {
+      "track_id": 39,
+      "frames": 8,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_39.npy"
+    },
+    {
+      "track_id": 40,
+      "frames": 43,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_40.npy"
+    },
+    {
+      "track_id": 41,
+      "frames": 62,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_41.npy"
+    },
+    {
+      "track_id": 42,
+      "frames": 160,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_42.npy"
+    },
+    {
+      "track_id": 43,
+      "frames": 46,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_43.npy"
+    },
+    {
+      "track_id": 45,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_45.npy"
+    },
+    {
+      "track_id": 46,
+      "frames": 8,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_46.npy"
+    },
+    {
+      "track_id": 47,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_47.npy"
+    },
+    {
+      "track_id": 48,
+      "frames": 56,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_48.npy"
+    },
+    {
+      "track_id": 49,
+      "frames": 156,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_49.npy"
+    },
+    {
+      "track_id": 50,
+      "frames": 238,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_50.npy"
+    },
+    {
+      "track_id": 51,
+      "frames": 7,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_51.npy"
+    },
+    {
+      "track_id": 52,
+      "frames": 7,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_52.npy"
+    },
+    {
+      "track_id": 55,
+      "frames": 28,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_55.npy"
+    },
+    {
+      "track_id": 56,
+      "frames": 6,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_56.npy"
+    },
+    {
+      "track_id": 57,
+      "frames": 9,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_57.npy"
+    },
+    {
+      "track_id": 59,
+      "frames": 26,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_59.npy"
+    },
+    {
+      "track_id": 60,
+      "frames": 22,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_60.npy"
+    },
+    {
+      "track_id": 64,
+      "frames": 10,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_64.npy"
+    },
+    {
+      "track_id": 65,
+      "frames": 8,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_65.npy"
+    },
+    {
+      "track_id": 66,
+      "frames": 6,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_66.npy"
+    },
+    {
+      "track_id": 67,
+      "frames": 10,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_67.npy"
+    },
+    {
+      "track_id": 68,
+      "frames": 10,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_68.npy"
+    },
+    {
+      "track_id": 71,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_71.npy"
+    },
+    {
+      "track_id": 72,
+      "frames": 6,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_72.npy"
+    },
+    {
+      "track_id": 75,
+      "frames": 206,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_75.npy"
+    },
+    {
+      "track_id": 76,
+      "frames": 4,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_76.npy"
+    },
+    {
+      "track_id": 77,
+      "frames": 38,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_77.npy"
+    },
+    {
+      "track_id": 80,
+      "frames": 99,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_80.npy"
+    },
+    {
+      "track_id": 81,
+      "frames": 2,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_81.npy"
+    },
+    {
+      "track_id": 82,
+      "frames": 17,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_82.npy"
+    },
+    {
+      "track_id": 83,
+      "frames": 48,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_83.npy"
+    },
+    {
+      "track_id": 85,
+      "frames": 18,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_85.npy"
+    },
+    {
+      "track_id": 86,
+      "frames": 44,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_86.npy"
+    },
+    {
+      "track_id": 87,
+      "frames": 1,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_87.npy"
+    },
+    {
+      "track_id": 88,
+      "frames": 32,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_88.npy"
+    },
+    {
+      "track_id": 89,
+      "frames": 7,
+      "n_keypoints": 17,
+      "path": "pose_out_dcsass/Shoplifting013_x264/track_89.npy"
+    }
+  ]
+}

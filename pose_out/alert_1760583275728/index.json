@@ -1,0 +1,17 @@
+{
+  "video": "output/alerts/alert_1760583275728.mp4",
+  "tracks": [
+    {
+      "track_id": 1,
+      "frames": 13,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760583275728/track_1.npy"
+    },
+    {
+      "track_id": 2,
+      "frames": 3,
+      "n_keypoints": 17,
+      "path": "pose_out/alert_1760583275728/track_2.npy"
+    }
+  ]
+}
