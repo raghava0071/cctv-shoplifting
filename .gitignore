@@ -12,3 +12,12 @@ __pycache__/
 .DS_Store
 *.log
 *.tmp
+datasets_small.zip
+*.zip
+output/**/*.mp4
+output/demos/
+output/hard_negatives/
+datasets/**/*.mp4
+datasets/**/*.avi
+datasets/**/*.mov
+datasets/**/*.mkv
