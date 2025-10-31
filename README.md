@@ -15,6 +15,29 @@ After generating candidate alert clips from the DCSASS shoplifting dataset, I bu
 
 **Goal:** find out if a single fixed threshold (0.55) is good enough, and what kinds of scenes the model is actually confused by.
 
+---
+
+## Project Structure (for Recruiters)
+
+```text
+cctv-shoplifting/
+├── app_review.py               # Streamlit UI for reviewing detected events
+├── starter_pipeline.py         # Base YOLOv8 + DeepSORT + risk pipeline
+├── tools/                      # Human-labeling, evaluation, export scripts
+│   ├── play_top_events.py
+│   ├── eval_thresholds.py
+│   └── export_hard_negatives.py
+├── training/                   # Future model training (pose / LSTM / re-ID)
+│   ├── train_skeleton_lstm.py
+│   └── eval_skeleton_lstm.py
+├── manifests/                  # Result manifests, summary metadata
+├── dataset_previews/           # Tiny downscaled demo clips (safe for GitHub)
+├── README.md                   # Full documentation and workflow summary
+├── DATASETS.md                 # Local dataset setup (ignored in Git)
+├── requirements.txt            # Environment dependencies
+├── .gitignore                  # Ignore data, models, outputs
+└── LICENSE
+
 ### Steps
 
 1. **Collect alerts**  
