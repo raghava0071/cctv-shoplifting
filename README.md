@@ -1,3 +1,13 @@
+## What’s in this repo?
+
+- **Realtime CCTV shoplifting prototype** (YOLOv8 + DeepSORT)
+- **Human-in-the-loop labeling loop** – I reviewed 896 model-generated clips
+- **Threshold analysis** – `tools/eval_thresholds.py` → writes `output/threshold_sweep.csv`
+- **Hard-negative mining** – `tools/export_hard_negatives.py` → copies 538 false positives to `output/hard_negatives/` for retraining
+- **Streamlit reviewer** – `app_review.py`
+
+📦 **Not in GitHub**: original CCTV/DCSASS videos, big MP4s, and model weights → see `DATASETS.md`.
+
 # CCTV Shoplifting / Surveillance Risk Prototype
 ## Human-in-the-Loop Shoplifting Evaluation
 
