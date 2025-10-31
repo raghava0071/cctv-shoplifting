@@ -1,19 +1,18 @@
-# Datasets & Provenance
+# Datasets (local only)
 
-We do **not** commit full third-party videos. Instead:
+This repo does **not** contain full CCTV / DCSASS videos because of size and licensing.
 
-- **DCSASS** (Kaggle: `mateohervas/dcsass-dataset`, CC-BY-NC-SA-4.0)  
-  Used: `Shoplifting/**/*.mp4`
-- **UCSD Anomaly Detection v1p2** (Kaggle mirror: `karthiknm1/ucsd-anomaly-detection-dataset`)  
-  Used: `UCSDped1/Test/*` (first 16 folders) converted via `tools/ucsd_frames_to_mp4.py`.
+Put your data like this on your machine:
 
-## Recreate
+datasets/
+└── dcsass/
+    └── DCSASS Dataset/
+        └── Shoplifting/*.mp4
 
-bash tools/recreate_data.sh
+Then run:
+  python tools/eval_thresholds.py
+  python tools/export_hard_negatives.py
 
-## Included in repo
-- labels.csv
-- pose_out_sample/ (100 positive + 93 negative tracks)
-- output/alert_log.csv, output/alert_events.json
-- output/demos/*.mp4 (event demo clips)
-- runs/lstm_skeleton_best.pt (Git LFS)
+The scripts will read from:
+- output/labels.csv          (your human labels)
+- output/demos/*.mp4         (generated clips)
