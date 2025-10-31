@@ -1,23 +1,30 @@
-# Ignore heavy data / environment files
-output/**/*.mp4
-output/demos/
-output/hard_negatives/
-datasets/**/*.mp4
-datasets/**/*.avi
-datasets/**/*.mov
-datasets/**/*.mkv
-datasets/**/*.zip
+# venv
 venv/
+.env/
+
+# python
 __pycache__/
-.DS_Store
-*.log
-*.tmp
+*.pyc
+
+# local data / big media
+datasets/
 datasets_small.zip
-*.zip
-output/**/*.mp4
-output/demos/
-output/hard_negatives/
-datasets/**/*.mp4
-datasets/**/*.avi
-datasets/**/*.mov
-datasets/**/*.mkv
+data/raw/
+data/tmp/
+*.mp4
+*.avi
+*.mov
+
+# model weights
+*.pt
+*.onnx
+
+# generated outputs
+output/
+runs/
+pose_out/
+pose_out_*/
+results/
+
+# OS
+.DS_Store
