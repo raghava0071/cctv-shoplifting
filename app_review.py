@@ -1,42 +1,65 @@
+import os
 import streamlit as st
 import pandas as pd
-from pathlib import Path
 
-st.set_page_config(page_title="CCTV Alerts Review", layout="wide")
-st.title("CCTV Alerts Review")
+st.set_page_config(page_title="CCTV Shoplifting Review", layout="wide")
 
-csv_path = Path("output/alert_log.csv")
-if not csv_path.exists():
-    st.warning("No alert_log.csv found yet.")
+st.title("CCTV Shoplifting – Human-in-the-Loop Review")
+
+FINAL_CSV = "output/final_scores.csv"
+DEMOS_DIR = "output/demos"
+
+if not os.path.exists(FINAL_CSV):
+    st.error("output/final_scores.csv not found. Run tools/build_final_ensemble.py first.")
     st.stop()
 
-df = pd.read_csv(csv_path)
+df = pd.read_csv(FINAL_CSV)
 
-# Expected columns from risk_alerts.py
-expected = ["ts","track_id","frames","shoplift_prob","fired","source","clip_path"]
-missing = [c for c in expected if c not in df.columns]
-if missing:
-    st.error(f"Missing columns in CSV: {missing}")
-    st.dataframe(df.head())
-    st.stop()
+st.sidebar.header("Filters")
 
-# Filters
-c1, c2, c3 = st.columns(3)
-with c1:
-    min_prob = st.slider("Min probability", 0.0, 1.0, 0.50, 0.01)
-with c2:
-    only_fired = st.checkbox("Only fired events", value=True)
-with c3:
-    min_frames = st.number_input("Min frames", min_value=0, value=16, step=1)
+label_filter = st.sidebar.multiselect(
+    "Label (human)",
+    options=sorted(df["label"].dropna().unique().tolist()),
+    default=[],
+)
 
-fdf = df.copy()
-fdf = fdf[fdf["shoplift_prob"] >= min_prob]
-if only_fired:
-    fdf = fdf[fdf["fired"] == 1]
-fdf = fdf[fdf["frames"] >= min_frames]
+min_score = st.sidebar.slider(
+    "Minimum final score",
+    min_value=0.0,
+    max_value=float(df["final_score"].max()),
+    value=0.5,
+    step=0.01,
+)
 
-st.subheader("Alerts")
-st.dataframe(fdf.sort_values("ts").tail(500), use_container_width=True)
+show_n = st.sidebar.slider("Show top N", 10, 200, 50, 10)
 
-st.subheader("Sources")
-st.write(fdf["source"].dropna().unique())
+# apply filters
+f = df.copy()
+if label_filter:
+    f = f[f["label"].isin(label_filter)]
+f = f[f["final_score"] >= min_score]
+f = f.sort_values("final_score", ascending=False).head(show_n)
+
+st.write(f"Showing {len(f)} clips")
+
+for _, row in f.iterrows():
+    clip_rel = row["clip_path"]
+    clip_abs = os.path.join(DEMOS_DIR, clip_rel)
+    cols = st.columns([2, 1])
+    with cols[0]:
+        st.subheader(os.path.basename(clip_rel))
+        st.write(f"label={row.get('label','?')}  | final_score={row['final_score']:.3f}")
+        st.write(f"yolo={row.get('yolo_prob',0):.3f}  frame={row.get('frame_cnn_score',0):.3f}  video={row.get('video_lstm_score',0):.3f}")
+        if os.path.exists(clip_abs):
+            st.video(clip_abs)
+        else:
+            st.warning("video file missing (maybe deleted as broken)")
+    with cols[1]:
+        st.json({
+            "file": row.get("file", clip_rel),
+            "final_score": float(row["final_score"]),
+            "yolo_prob": float(row.get("yolo_prob", 0)),
+            "frame_cnn_score": float(row.get("frame_cnn_score", 0)),
+            "video_lstm_score": float(row.get("video_lstm_score", 0)),
+            "label": row.get("label", "")
+        })
