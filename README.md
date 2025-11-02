@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://github.com/raghava0071/cctv-shoplifting/assets/your-image-id/banner.png" width="80%">
+  <img src="https://github.com/raghava0071/cctv-shoplifting/blob/main/banner.png?raw=true" width="85%">
 </p>
+
 
 ## What’s in this repo?
 
