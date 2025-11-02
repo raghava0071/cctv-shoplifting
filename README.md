@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/raghava0071/cctv-shoplifting/assets/your-image-id/banner.png" width="80%">
+</p>
+
 ## What’s in this repo?
 
 - **Realtime CCTV shoplifting prototype** (YOLOv8 + DeepSORT)
