@@ -2,6 +2,13 @@
   <img src="https://github.com/raghava0071/cctv-shoplifting/blob/main/banner.png?raw=true" width="85%">
 </p>
 
+## “CCTV Shoplifting 3.0 – Real-time Pose Behavior”
+
+One diagram or bullet flow:
+
+YOLOv8 Pose + ByteTrack → pose tracks → BehaviorRuntime → risk score per track → alerts.csv + alert clips
+
+Exact “How to run” commands
 
 ## What’s in this repo?
 
